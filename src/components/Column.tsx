@@ -17,18 +17,9 @@ const Column: React.FC<Props> = ({ id, title }) => {
       <h2 className="text-lg font-bold text-personaYellow mb-4">{title}</h2>
       <Droppable droppableId={id} type="CARD">
         {provided => (
-          <div
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-            className="min-h-[10rem]"
-          >
+          <div ref={provided.innerRef} {...provided.droppableProps} className="min-h-[10rem]">
             {column.cardOrder.map((cardId, index) => (
-              <Card
-                id={cardId}
-                key={cardId}
-                index={index}
-                title={cards[cardId]?.title ?? ''}
-              />
+              <Card id={cardId} key={cardId} index={index} title={cards[cardId]?.title ?? ''} />
             ))}
             {provided.placeholder}
           </div>

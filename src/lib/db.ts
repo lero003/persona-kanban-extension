@@ -20,7 +20,8 @@ export interface Card {
   title: string;
   description?: string;
   checklist: ChecklistItem[];
-  attachments: string[]; // Attachment ids
+  attachments: string[];
+  due?: number;
   createdAt: number;
 }
 
@@ -38,16 +39,14 @@ export interface Board {
 
 class PersonaDB extends Dexie {
   attachments!: Table<Attachment, string>;
-  checklistItems!: Table<ChecklistItem, string>;
   cards!: Table<Card, string>;
   columns!: Table<Column, string>;
   boards!: Table<Board, string>;
 
   constructor() {
     super('persona-kanban');
-    this.version(1).stores({
+    this.version(2).stores({
       attachments: 'id',
-      checklistItems: 'id',
       cards: 'id',
       columns: 'id',
       boards: 'id'

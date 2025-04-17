@@ -8,10 +8,6 @@ export default defineConfig({
   build: {
     target: 'chrome118',
     outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: 'index.html'
-      }
-    }
+    rollupOptions: { input: { main: 'index.html' } }
   }
 });

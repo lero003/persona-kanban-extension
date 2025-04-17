@@ -1,39 +1,15 @@
-# Persona Kanban (Chrome Extension)
+# Persona Kanban (Chrome Extension) – v0.1.0
 
-A colorful, Persona‐inspired offline‑first Kanban board built with React, Vite and Manifest V3.
+Colorful offline‑first Kanban board inspired by Persona game UI.
 
-## Features
-
-* Drag & Drop columns and cards  
-* Offline‑first data persistence (IndexedDB / Dexie)  
-* Checklist & attachment placeholders  
-* Pop, primary‑color UI based on the *Persona* game series  
-* Ready for future cloud‑sync (Firebase / Supabase)
+## New in v0.1.0
+* 🎯 Drag & Drop order persists to IndexedDB  
+* 📝 Card modal with checklist & due‑date field  
+* 🔔 Chrome notifications on due date
 
 ## Quick Start
-
 ```bash
-# 1. install dependencies
 npm install
-
-# 2. run dev build (watch mode)
-npm run dev        # dist/ folder is created automatically
-
-# 3. load into Chrome
-#    - open chrome://extensions
-#    - enable 'Developer mode'
-#    - click 'Load unpacked'
-#    - select the dist/ folder
+npm run dev
+# load dist/ as unpacked extension
 ```
-
-### Production build
-
-```bash
-npm run build
-```
-
-Uploads the generated `dist/` folder directly to the Chrome Web Store.
-
-## License
-
-MIT

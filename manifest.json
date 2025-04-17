@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Persona Kanban",
   "description": "Persona\u2011inspired colorful Kanban board (offline\u2011first)",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "icons": {
     "16": "icons/icon_16.png",
     "48": "icons/icon_48.png",
@@ -20,6 +20,5 @@
     "storage",
     "notifications",
     "alarms"
-  ],
-  "host_permissions": []
+  ]
 }
